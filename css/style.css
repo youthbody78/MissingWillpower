@@ -85,12 +85,12 @@
 @media (max-width: 1024px) {
 	.sidenav{width: 27.2%;}
 }
-@media (max-width: 778px) {
+@media (max-width: 768px) {
 	.sidenav{
 		width: 278px;
 		left: -230px;
 		transform: translateX(0);
-		transition: all 0.5s;
+		transition: transform 0.5s;
 	}
 }
 .open{
@@ -113,6 +113,11 @@
 }
 .navbar > ul > li > a{
 	padding: 8px;
+	color: #000;
+	transition: color 0.3s;
+}
+.navbar > ul > li > a:hover{
+	color: #707070;
 }
 
 .link-nav{
@@ -236,11 +241,18 @@
 }
 .slogan-part > .CTA-btn{
 	position: absolute;
+	color: #000;
+	background-color: rgba(0, 0, 0, 0);
 	bottom: 8.33%;
 	right: 17.2%;
 	padding: 0.8vw 1.8vw 0.8vw 1.8vw;
 	border: 2px solid #000;
 	border-radius: 2px;
+	transition: all 0.3s;
+}
+.slogan-part > .CTA-btn:hover{
+	background-color: rgba(0, 0, 0, 1);
+	color: #fff;
 }
 @media (max-width: 1280px) {
 	.slogan-side{width: 37%;}
@@ -292,7 +304,33 @@
 	background-image: url('../images/jumbotron-title.svg');
 	background-repeat: no-repeat;
 	background-size: auto 100%;
-	margin-bottom: 45px;
+	margin-bottom: 1vh;
+}
+.jumbotron > .name{
+	position: relative;
+	display: inline-block;
+	width: auto;
+	height: auto;
+	box-sizing: border-box;
+	background-color: #000;
+	margin: 3vh 0;
+}
+.jumbotron > .name > h6{
+	display: inline-block;
+	color: #122F4D;
+	font-size: 18px;
+	letter-spacing: 4px;
+	background-color: #fff;
+	border: 1px solid #122F4D;
+	padding: 0.5vh 0.8vw;
+	margin: 0;
+	transform: translate(0,0);
+	animation: floating 3s ease infinite;
+}
+@keyframes floating {
+	0%  {transform: translate(0,0);}
+	50% {transform: translate(5px,-5px);}
+	100%{transform: translate(0,0);}
 }
 .jumbotron > .girl{
 	width: 10%;
@@ -305,6 +343,7 @@
 }
 @media (max-width: 414px) {
 	.jumbotron > .title{width: 180px;height: 80px;}
+	.jumbotron > .name > h6{padding: 0.5vh 2vw ;}
 	.jumbotron > .girl{width: 16%;}
 }
  
@@ -417,10 +456,14 @@
 	color: #707070;
 	font-size: 16px;
 	line-height: 48px;
+	transition: color 0.3s;
 }
 #course-group .item > .dialog .get-more .more-btn > .icon{
 	display: inline-block;
 	float: none;
+}
+#course-group .item > .dialog .get-more .more-btn:hover{
+	color: #000;
 }
 
 #course-group .item > .girl{
@@ -619,7 +662,7 @@
 	.recommend > .title{width: 90%;}	
 }	
 
-.reccommend-group{
+.recommend-group{
 	position: relative;
 	width: 80%;
 	height: auto;
@@ -631,13 +674,14 @@
 	justify-content: space-between;
 }
 
-.reccommend-item{
+.recommend-item{
 	display: block;
 	width: 32%;
 	text-align: center;
 }
 
-.reccommend-item .imgbox{
+
+.recommend-item .imgbox{
 	display: inline-block;
 	width: 80%;
 	overflow: hidden;
@@ -648,44 +692,51 @@
     -webkit-border-radius: 50%;
     border-radius: 50%; 
 }
-.reccommend-item .imgbox .imgbox__inner{
+.recommend-item .imgbox .imgbox__inner{
 	position: relative;
 	width: 100%;
 	height: 0;
 	padding-top: 100%;
 }
-.reccommend-item .imgbox .imgbox__inner img{
+.recommend-item .imgbox .imgbox__inner img{
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 }
 
-.reccommend-item > h4,
-.reccommend-item > h6,
-.reccommend-item > p{
+.recommend-item > h4,
+.recommend-item > h6,
+.recommend-item > p{
 	color: #fff;
+	transition: color 0.3s;
 }
-.reccommend-item > h4{
+.recommend-item:hover > h4,
+.recommend-item:hover > h6,
+.recommend-item:hover > p{
+	color: #0E41B8;
+}
+.recommend-item > h4{
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 48px;
 	margin: 0;
 }
-.reccommend-item > h6{
+.recommend-item > h6{
 	font-weight: 500;
 	margin-top: 0;
 }
+
 @media (max-width: 1280px) {
-	.reccommend-group{width: 87.66%;}
+	.recommend-group{width: 87.66%;}
 }
 @media (max-width: 414px) {
-	.reccommend-group{flex-direction: column;}
-	.reccommend-item{width: 100%;margin-bottom: 16px;}
+	.recommend-group{flex-direction: column;}
+	.recommend-item{width: 100%;margin-bottom: 16px;}
 }
 
 /* detail */
-.reccommend-detail{
+.recommend-detail{
 	position: fixed;
 	left: 17%;
 	top: 50%;
@@ -695,37 +746,38 @@
 	overflow: hidden;
 	background-color: #fff;
 	border: 5px solid #000;
-	border-radius: 3.5%;
+	border-radius: 15px;
 	padding: 5vw;
 	box-sizing: border-box;
 	z-index: 10;
 
 	display: none;
 }
-.reccommend-detail > .detail__inner{
+
+.recommend-detail > .detail__inner{
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-.reccommend-detail > .detail__inner > .row > img{
+.recommend-detail > .detail__inner > .row > img{
 	display: inline-block;
-	width: 14vw;
+	width: 35%;
 	height: auto;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-bottom: 8vh;
 }
-.reccommend-detail > .detail__inner > .row > .info{
+.recommend-detail > .detail__inner > .row > .info{
 	display: inline-block;
-	width: 25vw;
+	width: 60%;
 	height: auto;
 	text-align: center;
 	margin-top: 3vh;
 	vertical-align: top;
 }
-.reccommend-detail > .detail__inner > .row > .info > h3{
+.recommend-detail > .detail__inner > .row > .info > h3{
 	color: #000;
 	margin: 0;
 	font-size: 48px;
@@ -733,7 +785,7 @@
 	letter-spacing: 8px;
 	line-height: 64px;
 }
-.reccommend-detail > .detail__inner > .row > .info > h5{
+.recommend-detail > .detail__inner > .row > .info > h5{
 	color: #000;
 	margin: 0;
 	font-size: 22px;
@@ -741,7 +793,7 @@
 	letter-spacing: 3px;
 	line-height: 32px;
 }
-.reccommend-detail > .detail__inner > .row > .info > h6{
+.recommend-detail > .detail__inner > .row > .info > h6{
 	color: #000;
 	margin: 0;
 	font-size: 18px;
@@ -749,6 +801,7 @@
 	letter-spacing: 1px;
 	line-height: 32px;
 }
+
 .detail--closeBtn{
 	position: absolute;
 	right: 0;
@@ -772,9 +825,17 @@
 }
 .detail--closeBtn > .closeBtn__inner > span.top{
 	transform: rotate(45deg);
+	transition: all 0.3s;
 }
 .detail--closeBtn > .closeBtn__inner > span.bottom{
 	transform: rotate(-45deg);
+	transition: all 0.4s;
+}
+.detail--closeBtn:hover > .closeBtn__inner > span.top{
+	transform: rotate(-45deg);
+}
+.detail--closeBtn:hover > .closeBtn__inner > span.bottom{
+	transform: rotate(45deg);
 }
 
 .detail__inner > .content > h5{
@@ -792,10 +853,69 @@
 	margin-bottom: 0;
 
 }
+@media (max-width: 1280px) {
+	.recommend-detail{width: 64vw;}
+}
+@media (max-width: 1024px) {
+	.recommend-detail{left: 30%;width: 67vw;}
+	.recommend-detail > .detail__inner > .row > .info{}
+}
+@media (max-width: 768px){
+	.recommend-detail{left: 10.5%;width: 85vw;}
+}
+@media (max-width: 414px){
+	.recommend-detail{
+		left: 48px;
+		width: calc(100% - 48px);
+	}
+	.recommend-detail > .detail__inner > .row > img{
+		display: block;
+		width: 50%;
+		padding-top: 16px;
+		margin: 0 auto;
+	}
+	.recommend-detail > .detail__inner > .row > .info{
+		display: block;
+		width: 100%;
+		margin: 3vh 0;
+	}
+	.recommend-detail > .detail__inner > .row > .info > h3{
+		font-size: 28px;
+		line-height: 36px;
+	}
+	.recommend-detail > .detail__inner > .row > .info > h5{
+		font-size: 16px;
+		line-height: 32px;
+	}
+	.recommend-detail > .detail__inner > .row > .info > h6{
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.detail__inner > .content > h5{
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.detail__inner > .content > p{
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+@media (max-width: 320px){
+	.recommend-detail > .detail__inner{
+		height: 100%;
+		overflow: hidden;
+	}
+	.recommend-detail > .detail__inner > .row > img{padding-top: 8px;}
+	.recommend-detail > .detail__inner > .row > .info{margin: 1vh;}
+	.recommend-detail > .detail__inner > .row > .info > h6{line-height: 18px;}
+}
 
 /* --------------------------- */
 /* $Price*/
 /* --------------------------- */
+.price{
+	text-align: center;
+}
 .price > .title > h4,
 .price > .title > h6{
 	text-align: center;
@@ -810,13 +930,33 @@
 	font-weight: 200;
 	line-height: 60px;
 	letter-spacing: 3px;
-	margin-top: 0;
-	margin-bottom: 3vh;
+	margin: 0;
 }
+.price > .SignUp_btn{
+	color: #000;
+	background-color: rgba(0, 0, 0, 0);
+	display: inline-block;
+	padding: 1.3vh 2.3vw;
+	border: 2px solid #000;
+	width: auto;
+
+	font-size: 24px;
+	letter-spacing: 4px;
+	border-radius: 28px;
+	margin: 3vh auto 5vh auto;
+	transition: all 0.3s;
+}
+.price > .SignUp_btn:hover{
+	color: #fff;
+	background-color: rgba(0, 0, 0, 1.0);
+}
+
 @media (max-width: 414px) {
 	.price > .title > h4{font-size: 28px;}
-	.price > .title > h6{padding: 32px;line-height: 32px;}
+	.price > .title > h6{line-height: 32px;}
+	.price > .SignUp_btn{padding: 16px 32px;}
 }
+
 
 .price-group{
 	position: relative;

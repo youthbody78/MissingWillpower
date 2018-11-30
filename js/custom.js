@@ -24,22 +24,22 @@ $(document).ready(function(){
 
   //recommend-detail
   $('#recommend-btn-1').click(function(){
-    $('#reccommend-detail-1').fadeIn();
+    $('#recommend-detail-1').fadeIn();
   })
   $('#recommend-btn-2').click(function(){
-    $('#reccommend-detail-2').fadeIn();
+    $('#recommend-detail-2').fadeIn();
   })
   $('#recommend-btn-3').click(function(){
-    $('#reccommend-detail-3').fadeIn();
+    $('#recommend-detail-3').fadeIn();
   })
   $('#detail--closeBtn-1').click(function(){
-    $('#reccommend-detail-1').fadeOut();
+    $('#recommend-detail-1').fadeOut();
   })
   $('#detail--closeBtn-2').click(function(){
-    $('#reccommend-detail-2').fadeOut();
+    $('#recommend-detail-2').fadeOut();
   })
   $('#detail--closeBtn-3').click(function(){
-    $('#reccommend-detail-3').fadeOut();
+    $('#recommend-detail-3').fadeOut();
   })
   
 
