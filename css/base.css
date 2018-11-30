@@ -385,12 +385,15 @@ template {
 .bg-color--primary{background-color: #122F4D;}
 .bg-color--secondary{background-color: #0E41B8;}
 .bg-color--black{background-color: #000;}
-.bg-color--yellow{background-color: #FFD609;}
 .bg-color--orange{background-color: #FF8800;}
 .bg-color--lightblue{background-color: #B4D9FF;}
-.bg-color--lightgreen{background-color: #E9FFFA;}
 .bg-color--grey{background-color: #EFEFE8;}
 .bg-color--white{background-color: #fff;}
+
+.bg-color--pink{background-color: #FF9E9E;}
+.bg-color--peach{background-color: #FFC89E;}
+.bg-color--buff{background-color: #F0FF9E;}
+
 
 /* text color */
 .color--primary{color: #122F4D;}
