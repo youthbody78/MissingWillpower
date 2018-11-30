@@ -531,6 +531,7 @@ hr{
  /* $Utility */
  /* --------------------------- */
 /* padding */
+.u-padding-0{padding: 0px !important;}
 .u-padding-4{padding: 4px !important;}
 .u-padding-8{padding: 8px !important;}
 .u-padding-16{padding: 16px !important;}
