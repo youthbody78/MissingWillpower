@@ -1,20 +1,6 @@
 $(document).ready(function(){
 
-  //owlCarousel
-  $("#course-group").owlCarousel({
-  	animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    items:1,
-    margin:0,
-    smartSpeed:1000,
-    loop:true,
-    nav:false,
-    dots: true,
-    dotsData:true,
-    autoplay:true,
-    autoplayTimeout:4000,
-    autoplayHoverPause:true,
-  });
+  
 
   //menu-toggle
   $(".menu-toggle").click(function() {
@@ -40,6 +26,23 @@ $(document).ready(function(){
   })
   $('#detail--closeBtn-3').click(function(){
     $('#recommend-detail-3').fadeOut();
+  })
+
+  //teacher-detail
+  $('#teacher-btn-1').click(function(){
+    $('#teacher-detail-1').addClass('move');
+    $('#teacher-detail-2').removeClass('move');
+    $('#teacher-detail-3').removeClass('move');
+  })
+  $('#teacher-btn-2').click(function(){
+    $('#teacher-detail-1').removeClass('move');
+    $('#teacher-detail-2').addClass('move');
+    $('#teacher-detail-3').removeClass('move');
+  })
+  $('#teacher-btn-3').click(function(){
+    $('#teacher-detail-1').removeClass('move');
+    $('#teacher-detail-2').removeClass('move');
+    $('#teacher-detail-3').addClass('move');
   })
   
 
