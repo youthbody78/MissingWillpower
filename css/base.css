@@ -662,6 +662,7 @@ hr{
 @media (max-width: 414px) {
   .u-mobile-br{display: inline-block;}
   .u-mobile-hidden{visibility: hidden;display: none;}
+  .u-mobile-pd-0{padding: 0 !important}
 }
 
 

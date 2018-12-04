@@ -33,16 +33,25 @@ $(document).ready(function(){
     $('#teacher-detail-1').addClass('move');
     $('#teacher-detail-2').removeClass('move');
     $('#teacher-detail-3').removeClass('move');
+    $('#teacher-detail__mobile-1').addClass('move');
+    $('#teacher-detail__mobile-2').removeClass('move');
+    $('#teacher-detail__mobile-3').removeClass('move');
   })
   $('#teacher-btn-2').click(function(){
     $('#teacher-detail-1').removeClass('move');
     $('#teacher-detail-2').addClass('move');
     $('#teacher-detail-3').removeClass('move');
+    $('#teacher-detail__mobile-1').removeClass('move');
+    $('#teacher-detail__mobile-2').addClass('move');
+    $('#teacher-detail__mobile-3').removeClass('move');
   })
   $('#teacher-btn-3').click(function(){
     $('#teacher-detail-1').removeClass('move');
     $('#teacher-detail-2').removeClass('move');
     $('#teacher-detail-3').addClass('move');
+    $('#teacher-detail__mobile-1').removeClass('move');
+    $('#teacher-detail__mobile-2').removeClass('move');
+    $('#teacher-detail__mobile-3').addClass('move');
   })
   
 
