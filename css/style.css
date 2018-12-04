@@ -310,18 +310,19 @@
 .detail > .detail__inner > .row  h3{
 	color: #000;
 	margin: 0 0 0 0;
-	font-size: 48px;
+	font-size: 40px;
 	font-weight: 700;
-	letter-spacing: 8px;
+	letter-spacing: 4px;
 	line-height: 64px;
+	width: 85%;
 }
 .detail > .detail__inner > .row  h4{
 	color: #000;
-	margin: 0;
-	font-size: 32px;
+	margin: 16px 0;
+	font-size: 28px;
 	font-weight: 600;
 	letter-spacing: 4px;
-	line-height: 64px;
+	line-height: 48px;
 }
 .detail > .detail__inner > .row  h5{
 	color: #000;
@@ -393,8 +394,8 @@
 }
 .detail__inner > .content > p{
 	color: #000;
-	font-size: 18px;
-	line-height: 32px;
+	font-size: 14px;
+	line-height: 22px;
 	margin-bottom: 0;
 }
 @media (max-width: 1280px) {
@@ -633,14 +634,14 @@
 
 #course-group .item > .dialog > h5{
 	color: #000;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 40px;
 	margin: 0;
 	padding-bottom: 0.5vh;
 }
 #course-group .item > .dialog > p{
 	color: #000;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 28px;
 	margin-bottom: 0;
 }
