@@ -9,23 +9,23 @@ $(document).ready(function(){
   });
 
   //recommend-detail
-  $('#recommend-btn-1').click(function(){
-    $('#recommend-detail-1').fadeIn();
+  $('#detail-btn-1').click(function(){
+    $('#detail-1').fadeIn();
   })
-  $('#recommend-btn-2').click(function(){
-    $('#recommend-detail-2').fadeIn();
+  $('#detail-btn-2').click(function(){
+    $('#detail-2').fadeIn();
   })
-  $('#recommend-btn-3').click(function(){
-    $('#recommend-detail-3').fadeIn();
+  $('#detail-btn-3').click(function(){
+    $('#detail-3').fadeIn();
   })
   $('#detail--closeBtn-1').click(function(){
-    $('#recommend-detail-1').fadeOut();
+    $('#detail-1').fadeOut();
   })
   $('#detail--closeBtn-2').click(function(){
-    $('#recommend-detail-2').fadeOut();
+    $('#detail-2').fadeOut();
   })
   $('#detail--closeBtn-3').click(function(){
-    $('#recommend-detail-3').fadeOut();
+    $('#detail-3').fadeOut();
   })
 
   //teacher-detail
