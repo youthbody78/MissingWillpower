@@ -1232,9 +1232,10 @@
 	top: 50%;
 	left: 0;
 	width: 100%;
-	height:100vh;
+	height:130vh;
 	transform: translateY(-50%);
 	background-color: #fff;
+	z-index: 0;	
 }
 .teacher-detail__mobile{
 	position: relative;
